@@ -1,0 +1,42 @@
+body{
+    background:#123451;
+    
+}
+div{
+    width: 200px;
+    height: auto;
+}
+div.b{
+    word-wrap: break-word;
+    font-size: 1.5em;
+}
+h1{
+    color: rgb(236, 218, 54);
+    background: white;
+}
+h1.heading{
+    text-align: center;
+    text-decoration: solid;
+    position: sticky;
+    top: 10px;
+}
+iframe{
+    height: 220px;
+    width: auto;
+}
+#frame_id{
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+p.cursor_c{
+    text-align: center;
+}
+
+a{
+    color: aqua;
+}
+input{
+    border: 1px solid #123451;
+    border-radius: 5px;
+}

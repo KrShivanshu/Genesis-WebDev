@@ -1,0 +1,173 @@
+/*====Google Fonts====*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+/*==== Variable CSS===*/
+:root{
+/*====Colores ====*/
+--first-color: #e81a1a;
+--input-color: #80868b;
+--border-color: #dadce0;
+/*==== ====*/
+--body-font: 'Roboto',sans-serif;
+--normal-font-size: 1rem;
+--small-font-sieze: .75rem
+}
+/*====Base ====*/
+*,::before,::after{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    padding: 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+h1{
+    margin:0;
+}
+/*====Form ====*/
+.l_form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.form{
+    width: 360px;
+    height: 360PX;
+    padding: 4rem 2rem;
+    border-radius:1rem ;
+    box-shadow:0 10px 25px rgba(31, 113, 180, 0.2)
+}
+.form__title{
+    font-weight: 400;
+    margin-bottom: 3rem;
+}
+.form__div{
+    position: relative;
+    height: 48px;
+    margin-bottom: 1.5rem;
+}
+.form__input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: var(--normal-font-size);
+    border: 1px solid var(--border-color);
+    border-radius: .5rem;
+    outline: none;
+    padding: 1rem;
+    background: none;
+    z-index: 1;
+}
+.form__label{
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    padding: 0 .25rem;
+    background-color: #fff;
+    color: var(--input-color);
+    font-size: var(--normal-font-size);
+    transition: .3s;
+}
+.form__button{
+    display: block;
+    margin-left: auto;
+    padding:.75rem 1rem;
+    outline: none;
+    border: none;
+    background-color: var(--first-color);
+    color:#fff;
+    font-size: var(--normal-font-size);
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: .3s;
+}
+.form__button:hover{
+    box-shadow: 0 10px 36px rgba(5, 5, 5, 0.15);
+}
+/*====Inputs focus move up label ====*/
+.form__input:focus + .form__label{
+    top: -.5rem;
+    left: .8rem;
+    color: var(--first-color);
+    font-size: var(--small-font-sieze);
+    font-weight: 500;
+    z-index: 10;
+}
+
+/*====Input focus sticky top level ====*/
+.form__input:not(:placeholder-shown).form__input:not(:focus)+ .form__label{
+    top: -.5rem;
+    left: .8rem;
+    font-size: var(--small-font-sieze);
+    font-weight: 500;
+    z-index: 10;
+}
+/*====Input focus ====*/
+.form__input:focus{
+    border: 1.5px solid var(--first-color);
+}
+
+
+.r_form{
+    position: absolute;
+    right: 10px;
+    top: 10px;    
+}
+
+.detail_form{
+    position: relative;
+    width: 360px;
+    padding: 4rem 2rem;
+    border-radius:1rem ;
+    box-shadow:0 10px 25px rgba(31, 113, 180, 0.2)
+}
+
+.form2__div{
+    position: relative;
+    height: 48px;
+    margin-bottom: 1.5rem;
+}
+
+.select_options{
+    position: relative;
+    left: 150px;
+}
+
+
+.form2_label{
+    color: var(--input-color);
+    font-size: var(--normal-font-size);
+    
+}
+option{
+    color: #80868b;
+}
+
+textarea{
+    width: 300px;
+}
+
+.first_frame{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.second_frame{
+    position: absolute;
+    left: 10px;
+    top: 260px;
+}
+
+.third_frame{
+    position: absolute;
+    left: 10px;
+    top: 500px;
+}
+
+iframe{
+    height: 220px;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===css==== -->
+    <link rel="stylesheet" href="style/style.css">
+
+
+    <style>
+        .checked {
+            color: orange;
+        }
+    </style>
+    <title>Form</title>
+</head>
+
+<body>
+    <iframe src="third.html" frameborder="0" class="first_frame">First</iframe>
+    <iframe src="first.html" frameborder="0" class="second_frame"></iframe>
+    <iframe src="second.html" frameborder="0" class="third_frame"></iframe>
+    <div class="l_form">
+        <form action="" class="form">
+            <h1 class="form__title">Sign In</h1>
+            <div class="form__div">
+                <input type="email" class="form__input" placeholder=" ">
+                <label for="" class="form__label">Email</label>
+            </div>
+            <div class="form__div">
+                <input type="password" class="form__input" placeholder=" ">
+                <label for="" class="form__label">Password</label>
+            </div>
+            <input type="submit" formaction="loginconfirmation.html" class="form__button" value="Sign">
+        </form>
+    </div>
+    <div class="r_form">
+        <form action="" class="detail_form">
+            <h1 class="form__title">Details</h1>
+            <div class="form2__div">
+                <label for="" class="form2_label">Country</label>
+                <select name="country" id="country" class="select_options" style="width:100px; height: 25px;">
+                    <option value="india">India</option>
+                    <option value="usa">USA</option>
+                    <option value="england">England</option>
+                    <option value="germany">Germany</option>
+                </select>
+            </div>
+            <div class="form2_div">
+                <label for="" class="form2_label">Select gender</label><br><br>
+                <input class="star star-5" id="star-5" type="radio" name="gender" name="genderM" value="Male" />
+                <label class="star star-5" for="star-5">Male</label>
+                <input class="star star-4" id="star-4" type="radio" name="gender" />
+                <label class="star star-4" for="star-4">Female</label>
+            </div>
+            <div class="form2_div">
+                <br>
+                <label for="" class="form2_label">What do you have?</label><br><br>
+                <input type="checkbox" name="bike" value="bike" class="form__checkbox"> <span>Bike</span> <br>
+                <input type="checkbox" name="car" value="car" class="form__checkbox"> <span>Car</span> <br>
+            </div>
+            <div class="form2_div">
+                <br>
+                <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="Comment"></textarea>
+            </div>
+            <div class="stars">
+                <input class="star star-5" id="star-5" type="radio" name="star" />
+                <label class="star star-5" for="star-5">5-Star</label>
+                <input class="star star-4" id="star-4" type="radio" name="star" />
+                <label class="star star-4" for="star-4">4-Star</label>
+                <input class="star star-3" id="star-3" type="radio" name="star" />
+                <label class="star star-3" for="star-3">3-Star</label>
+                <input class="star star-2" id="star-2" type="radio" name="star" />
+                <label class="star star-2" for="star-2">2-Star</label>
+                <input class="star star-1" id="star-1" type="radio" name="star" />
+                <label class="star star-1" for="star-1">1-Star</label>
+            </div><br>
+            <input type="button" onclick="alert('Updated Successfully!')" formaction="updateconfirmation.html"
+                class="form__button" value="Update">
+        </form>
+    </div>
+</body>
+
+</html>

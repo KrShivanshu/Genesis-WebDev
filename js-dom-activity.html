@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+
+    </script>
+</head>
+
+<body>
+    <div id="div-form">
+        <form action="js-dom-activity.html" , method="GET">
+            Name: <input type="text" name="myname" id="name"><br><br>
+            Phone: <input type="text" name="phone" id="phone"><br><br>
+            Email: <input type="email" name="Email" id="email"><br><br>
+            <button type='button' onclick="hide_form()">Submit</button>
+        </form>
+    </div>
+    <div id="div-details">
+        <p> Details Entered</p>
+        <p> Name = <span id='p-name'></span></p>
+        <p>Phone = <span id='p-phone'></span></p>
+        <p>Email = <span id='p-email'></span></p>
+    </div>
+    <script>
+        var y = document.getElementById('div-details');
+        y.style.display = "none";
+        document.getElementsByTagName("body")[0].style.backgroundColor = '#ff0000';
+        document.getElementsByTagName("body")[0].style.color = '#ffff00';
+        document.getElementsByTagName("body")[0].style.fontSize = 'larger';
+        function hide_form() {
+            display_details()
+
+            document.getElementsByTagName("body")[0].style.backgroundColor = '#ff0000';
+            var x = document.getElementById("div-form");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        function display_details() {
+            y.style.display = 'block';
+            document.getElementById("p-name").innerHTML = document.getElementById("name").value;
+            document.getElementById("p-phone").innerHTML = document.getElementById("phone").value;
+            document.getElementById("p-email").innerHTML = document.getElementById("email").value;
+        }
+    </script>
+</body>
+
+</html>

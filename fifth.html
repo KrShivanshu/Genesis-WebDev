@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/main.css">
+    <title>Form Page</title>
+    <script type="text/javascript">
+        alert("Welcome to JS!");
+        // function and block
+        let name = "Shivanshu"
+        function func() {
+            name = "nerd"
+            document.write("<br/>My name inside function " + name + "<br/>")
+        }
+        document.writeln("My name outside function " + name)
+        func()
+        // if else
+        var a = 10
+        var b = 5
+        if (a < b) {
+            document.write("b is greater");
+        }
+        else {
+            document.write("a is greater");
+        }
+        // for - loop
+        for (let i = 0; i < 5; i++) {
+            document.write("The number is " + i + "<br>");
+        }
+        // for in - loop
+        const person = { fname: "John", lname: "Doe", age: 25 };
+
+        for (let x in person) {
+            document.write("<b>" + person[x] + "</b>" + "<br/>");
+        }
+        // do while - loop
+        i=0;
+        do {
+            document.write("The number is " + i + "<br>");
+            i++;
+        }
+        while (i < 10);
+        //switch 
+        let text;
+        switch (new Date().getDay()) {
+            case 6:
+                text = "Today is Saturday";
+                break;
+            case 0:
+                text = "Today is Sunday";
+                break;
+            default:
+                text = "Looking forward to the Weekend";
+        }
+        document.write(text+"<br/>");
+
+        
+
+        // Functions
+        
+        //
+
+    </script>
+</head>
+
+<body style="background-color: antiquewhite;">
+    <form action="Forth.html" , method="GET">
+        Name: <input type="text" name="myname" id=""><br><br>
+        Phone: <input type="text" name="phone" id=""><br><br>
+        Email: <input type="email" name="Email" id=""><br><br>
+        <button>Submit</button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+@import url(https://fonts.googleapis.com/css?family=Zen+Tokyo+Zoo:regular);
+
+body {
+    font-family: "Courier New", Courier, monospace;
+    margin: 0%;
+    background: linear-gradient(to right, rgb(22, 22, 112), rgb(255, 255, 118), rgb(228, 60, 60));
+}
+.div-main {
+    overflow: hidden;
+    /* display: inline; */
+    /* margin: 20px; */
+    /* text-align: center; */
+    font-size: 30px;
+    font-weight: bold;
+    background: black;
+}
+.navbar-right {
+    margin-right: 10px;
+    display: inline;
+    float: right;
+}
+.navbar {
+    margin-left: 10px;
+    display: inline;
+    float: auto;
+}
+
+a {
+    color: skyblue;
+    /* margin: 10px 0px; */
+    padding: 10px 10px;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+a:hover {
+    overflow: hidden;
+    background-color: rgb(224, 32, 32);
+    color: rgb(22, 22, 112);
+}
+
+a:visited {
+    background-color: rgb(182, 224, 32);
+    /* color:rgb(22, 22, 112); */
+}
+
+.div-body .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    height: 360px;
+    width: 360px;
+    border: 3px hidden rgb(48, 39, 39);
+    border-radius: 1em;
+    background-color: rgb(255, 106, 106);
+    box-shadow: inset 0px 0px 6px 6px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* .container{
+    position: absolute;
+    width: inherit;
+    display: inherit;
+    border: 2px solid rgb(233, 225, 225);
+} */
+
+.legend {
+    /* top: 50%; */
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    /* display: block; */
+    background-color: rgb(255, 255, 255);
+    border-radius: 1em;
+    color: rgb(0, 0, 0);
+    position: relative;
+    /* left: 25%;
+    top: -20px; */
+    padding: 5px 15px;
+    font-size: 30px;
+    text-align: center;
+    box-shadow: 0px 0px 6px 0px rgb(0, 0, 0, 0.5);
+}
+
+.form-main, .form-main-submit {
+    position: relative;
+    width: 80%;
+    height: 30%;
+    /* border: 1px solid ; */
+    margin-left: 10%;
+    margin-top: 5%;
+    /* margin-right: -15%; */
+    position: absolute;
+}
+
+label {
+    font-size: 20px;
+    font-family: "Courier New", Courier, monospace;
+    padding-left: 4.5%;
+    position: relative;
+    /* top: 5px; */
+    left: 10px;
+    color: rgba(15, 10, 9, 0.589);
+    font-weight: bold;
+}
+
+input.name {
+    outline: none;
+    display: flex;
+    width: 90%;
+    height: 40px;
+    position: relative;
+    border: none;
+    border-top-left-radius: 0.4cm;
+    border-bottom-right-radius: 0.4cm;
+    margin-left: 4.5%;
+    padding-left: 10px;
+    color: red;
+    border-bottom: 2.5px solid rgb(14, 8, 8);
+}
+
+.name:focus {
+    font-size: larger;
+    box-shadow: inset 0px 2px 2px 0px rgb(0, 0, 0, 0.5);
+}
+
+button{
+    font-size: large;
+    width: 100px;
+    height: 35px;
+    margin: 20px;
+    position: relative;
+    float: right;
+    top: 15px;
+    background-color: white;
+    border: none;
+    box-shadow: inset 1px 0px 0px 1px rgba(0, 0, 0, 0.5);
+    border-top-left-radius: 0.4cm;
+    border-bottom-right-radius: 0.4cm;
+    border-bottom: 2px solid black;
+}
+
+.div-pass{
+    margin-top: 10px;
+}
+
+button:hover{
+    background: linear-gradient(to right, rgb(22, 22, 112), rgb(255, 255, 118), rgb(228, 60, 60));;
+}

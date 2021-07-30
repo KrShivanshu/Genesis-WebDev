@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript activity</title>
+    <style rel="stylesheet">
+        body {
+            background-color: rgb(86, 236, 236);
+            color: rgb(1, 58, 107);
+            font: bold;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        h2 {
+            background-color: black;
+            color: brown;
+        }
+    </style>
+    <script type="text/javascript">
+        document.write("<h2>Functions</h2>");
+        function sum(a, b) {
+            return a + b;
+        }
+        let x = sum(4, 5);
+        document.write('sum of 4 and 5 is ' + x);
+
+        document.write("<h2>Objects</h2>");
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "blue"
+        };
+        document.write(person.firstName + ' ' + person.lastName + ' is ' + person.age + ' Years old and his eyes color is ' + person.eyeColor);
+
+        document.write("<h2>Strings</h2>");
+        let str = new String('We are here in \"Newyork\" to watch NBA');
+        document.write('The result string is: ' + str);
+
+        document.write("<h2>String Methods</h2>");
+        document.write("The string lenght is " + str.length);
+        document.write("<br>Sliced String from 16 to 23 is: " + str.slice(16, 23));
+        document.write("<br>Sub-String from 16 to 23 is: " + str.substring(16, 23));
+        document.write("<br>SubStr from 16 of length 7 is: " + str.substr(16, 7));
+        document.write("<br>After replacing NBA with Fifa the new string is: " + str.replace(/NBA/i, 'Fifa'));
+        document.write("<br>LowerCase (NewYork): " + str.substring(16, 23).toLowerCase());
+        document.write("<br>UpperCase (NewYork): " + str.substring(16, 23).toUpperCase());
+
+        let text = str.concat(" and ", "Fifa");
+        document.write("<br>Concat: " + text);
+
+        text = "       Hello World!        ";
+        document.write("<br>Trimed str \"       Hello World!        \": " + text.trim());
+
+        text = '5'
+        document.write("<br>PadStart: " + text.padStart(4, 0));
+        document.write("<br>PadEnd: " + text.padEnd(4, 0));
+
+        document.write("<br>Char at postion 35 is: " + str.charAt(35));
+        document.write("<br>Char unicode at postion 35 is: " + str.charCodeAt(35));
+
+        document.write("<h2>String Search</h2>");
+        document.write("<br>Index of first occurence of \'e'\: " + str.indexOf('e'));
+        document.write("<br>Index of last occurence of \'e'\: " + str.lastIndexOf('e'));
+        document.write("<br>Index of first occurence of \'NewYork\' using search(): " + str.search('Newyork'));
+
+        text = "The rain in SPAIN stays mainly in the plain";
+        textM = text.match(/ain/g)
+        for (let i = 0; i < textM.length; i++) {
+            document.write("<br>" + (i + 1) + ':' + textM[i]);
+        }
+
+        document.write("<h2>String Template</h2>");
+        let firstName = "John";
+        let lastName = "Doe";
+
+        text = `Welcome ${firstName}, ${firstName}`;
+        document.write("<br>String formed using Variable subsitution: " + text);
+
+        let price = 10;
+        let VAT = 0.25;
+        let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;
+        document.write("<br>Value calculated using Expression Subsitution: " + total);
+
+        let header = "Templates Literals";
+        let tags = ["template literals", "javascript", "es6"];
+        let html = `<h2>${header}</h2><ul>`;
+        for (const x of tags) {
+            html += `<li>${x}</li>`;
+        }
+        html += `</ul>`;
+        document.write("<br>HTML Template : " + html);
+
+        document.write("<h2>Number</h2>");
+        x = 10
+        y = 5
+        document.write("<br>10 + 5 = " + (x + y));
+        x = "10"
+        y = "5"
+        document.write("<br>\"10\"+\"5\" = " + (x + y));
+        x = "10"
+        y = 5
+        document.write("<br>\"10\"+5 = " + (x + y));
+
+        document.write("<h2>Number</h2>");
+        document.write("<br>`(100 + 23).toString()` = " + (100 + 23).toString());
+        x = 9.656;
+        document.write("<br>`x.toExponential(2)` = " + x.toExponential(2));
+        document.write("<br>`x.toFixed(4)` = " + x.toFixed(4));
+        document.write("<br>`x.toPrecision(6)` = " + x.toPrecision(6));
+        document.write("<br>`Number(new Date(\"2017-09-30\"))` = " + Number(new Date("2017-09-30")));
+
+        document.write("<h2>Array</h2>");
+        const cars = ["Saab", "Volvo", "BMW"];
+        document.write("<br>Unsorted Array: ");
+        for (let x in cars) {
+            document.write("<b>" + cars[x] + "</b>" + "<br/>");
+        }
+        cars.sort()
+        document.write("<br>Sorted Array: ");
+        for (let x in cars) {
+            document.write("<b>" + cars[x] + "</b>" + "<br/>");
+        }
+        cars.push("Lemo")
+        document.write("<br>Car Array after pushing new element: ");
+        for (let x in cars) {
+            document.write("<b>" + cars[x] + "</b>" + "<br/>");
+        }
+
+        document.write("<h2>Array Methods</h2>");
+
+        document.write("<br>join() Car Array: " + cars.join(" * "));
+
+        cars.pop();
+        document.write("<br>Car Array after poping the last element: ");
+        for (let x in cars) {
+            document.write("<b>" + cars[x] + "</b>" + "<br/>");
+        }
+
+        cars.shift();
+        document.write("<br>Car Array after shifting the first element: ");
+        for (let x in cars) {
+            document.write("<b>" + cars[x] + "</b>" + "<br/>");
+        }
+
+        cars.unshift("BMW");
+        document.write("<br>Car Array after unshift(): ");
+        for (let x in cars) {
+            document.write("<b>" + cars[x] + "</b>" + "<br/>");
+        }
+
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.write("<br>New Array after splice");
+        fruits.splice(2, 0, "Lemon", "Kiwi")
+        for (let x in fruits) {
+            document.write("<b>" + fruits[x] + "</b>" + " ");
+        }
+
+        document.write("<h2>Sorting Arrays</h2>");
+        fruits.reverse();
+        document.write("<br>Reverse array: ");
+        for (let x in fruits) {
+            document.write("<b>" + fruits[x] + "</b>" + " ");
+        }
+
+        document.write("<h2>Array Iteration</h2>");
+        for (let i = 0; i < 5; i++) {
+            document.write("The number is " + i + "<br>");
+        }
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
